@@ -1,0 +1,1 @@
+# module-aheadworks-seo-compatibility
