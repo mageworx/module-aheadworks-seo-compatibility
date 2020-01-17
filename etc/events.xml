@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="mageworx_xmlsitemap_add_generator">
+        <observer
+                name="mageworx_xmlsitemap_add_aheadworks_blog_pages"
+                instance="MageWorx\AheadworksBlogSeoCompatibility\Observer\AddBlogPagesObserver"
+        />
+    </event>
+</config>

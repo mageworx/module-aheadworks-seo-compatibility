@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mageworx_seo>
+            <xml_sitemap_aheadworks_blog>
+                <add_posts>1</add_posts>
+                <add_categories>1</add_categories>
+                <add_static_pages>1</add_static_pages>
+                <blog_pages_priority>0.5</blog_pages_priority>
+            </xml_sitemap_aheadworks_blog>
+        </mageworx_seo>
+    </default>
+</config>

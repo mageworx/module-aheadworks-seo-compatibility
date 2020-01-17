@@ -1,0 +1,13 @@
+"%1 doesn't implement %2"                                                                                                                                          ,"%1 doesn't implement %2"
+"Given provider doesn't implement %1"                                                                                                                              ,"Given provider doesn't implement %1"
+"Blog Pages"                                                                                                                                                       ,"Blog Pages"
+SEO                                                                                                                                                                ,SEO
+"Aheadworks Blog in XML Sitemap"                                                                                                                                   ,"Aheadworks Blog in XML Sitemap"
+"Add Aheadworks Blog Pages To XML Sitemap"                                                                                                                         ,"Add Aheadworks Blog Pages To XML Sitemap"
+"This setting will work if you have Aheadworks Blog extension and SEO Compatibility Extension."                                                                    ,"This setting will work if you have Aheadworks Blog extension and SEO Compatibility Extension."
+"Add Post Pages"                                                                                                                                                   ,"Add Post Pages"
+"Add Category Pages"                                                                                                                                               ,"Add Category Pages"
+"Add Tag Pages"                                                                                                                                                    ,"Add Tag Pages"
+Frequency                                                                                                                                                          ,Frequency
+Priority                                                                                                                                                           ,Priority
+"Sort the pages <b>on your store only</b> according to their importance. Won't affect your site rankings among other websites. Valid values range from 0.0 to 1.0.","Sort the pages <b>on your store only</b> according to their importance. Won't affect your site rankings among other websites. Valid values range from 0.0 to 1.0."

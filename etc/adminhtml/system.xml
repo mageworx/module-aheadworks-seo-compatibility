@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageworx" sortOrder="2001">
+            <label>MageWorx</label>
+        </tab>
+        <section id="mageworx_seo" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>SEO</label>
+            <tab>mageworx</tab>
+            <resource>MageWorx_XmlSitemap::config_xmlsitemap</resource>
+            <group id="xml_sitemap" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                <group id="xml_sitemap_aheadworks_blog" translate="label comment" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Aheadworks Blog in XML Sitemap]]></label>
+                    <field id="add_blog_pages" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Aheadworks Blog Pages To XML Sitemap]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[This setting will work if you have Aheadworks Blog extension and SEO Compatibility Extension.]]></comment>
+                    </field>
+                    <field id="add_posts" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Post Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="add_categories" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Category Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="add_static_pages" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Add Tag Pages]]></label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="blog_pages_changefreq" translate="label" type="select" sortOrder="26" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Frequency]]></label>
+                        <source_model>Magento\Sitemap\Model\Config\Source\Frequency</source_model>
+                        <comment><![CDATA[The general information to search bots about the crawling frequency. The <i>Always</i> means that the page will differ each time it's accessed. The <i>Never</i> is used for the archived URLs like some old blog posts. <br/><b>NOTE!</b> It's always up to search bot to decide when these pages should be recrawled.]]></comment>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                    <field id="blog_pages_priority" translate="label comment" type="text" sortOrder="28" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label><![CDATA[Priority]]></label>
+                        <backend_model>Magento\Sitemap\Model\Config\Backend\Priority</backend_model>
+                        <comment><![CDATA[Sort the pages <b>on your store only</b> according to their importance. Won't affect your site rankings among other websites. Valid values range from 0.0 to 1.0.]]></comment>
+                        <depends>
+                            <field id="add_blog_pages">1</field>
+                        </depends>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>
