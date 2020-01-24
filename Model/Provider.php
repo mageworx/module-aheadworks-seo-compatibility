@@ -123,10 +123,39 @@ class Provider extends \Aheadworks\Blog\Model\Sitemap\ItemsProviderComposite
     {
         $itemsData = [];
 
-        /** @var \Magento\Framework\DataObject $entityWrapper */
-        foreach ($items as $item) {
+        /** @var \Magento\Framework\DataObject $entity */
+        foreach ($items as $entity) {
 
-            /** @var \Magento\Framework\DataObject $item */
+            $this->addItems($itemsData, $entity);
+        }
+
+        return [
+            'title'      => __('Blog Pages'),
+            'changefreq' => $this->helper->getFrequency(),
+            'priority'   => $this->helper->getPriority(),
+            'items'      => $itemsData
+        ];
+    }
+
+    /**
+     * @param array $itemsData
+     * @param \Magento\Framework\DataObject|\Magento\Sitemap\Model\SitemapItem $entity
+     */
+    protected function addItems(&$itemsData, $entity)
+    {
+        $items = [];
+
+        // magento 2.3 (magento/module-sitemap >= 100.3.0)
+        if ($entity instanceof \Magento\Sitemap\Model\SitemapItem && $entity->getUrl()) {
+            $items[] = $entity;
+
+        }
+        // magento 2.2
+        elseif ($entity instanceof \Magento\Framework\DataObject && $entity->getCollection()) {
+            $items = $entity->getCollection();
+        }
+
+        foreach ($items as $item) {
             if ($item->getUrl()) {
 
                 if ($item->getUpdatedAt() && !$this->lastmodValidator->isValid($item->getUpdatedAt())) {
@@ -141,13 +170,6 @@ class Provider extends \Aheadworks\Blog\Model\Sitemap\ItemsProviderComposite
                 ];
             }
         }
-
-        return [
-            'title'      => __('Blog Pages'),
-            'changefreq' => $this->helper->getFrequency(),
-            'priority'   => $this->helper->getPriority(),
-            'items'      => $itemsData
-        ];
     }
 
     /**
