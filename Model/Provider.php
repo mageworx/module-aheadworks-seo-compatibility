@@ -124,23 +124,21 @@ class Provider extends \Aheadworks\Blog\Model\Sitemap\ItemsProviderComposite
         $itemsData = [];
 
         /** @var \Magento\Framework\DataObject $entityWrapper */
-        foreach ($items as $entityWrapper) {
+        foreach ($items as $item) {
 
             /** @var \Magento\Framework\DataObject $item */
-            foreach ($entityWrapper->getCollection() as $item) {
-                if ($item->getUrl()) {
+            if ($item->getUrl()) {
 
-                    if ($item->getUpdatedAt() && !$this->lastmodValidator->isValid($item->getUpdatedAt())) {
-                        $date = date('Y-m-d', strtotime($item->getUpdatedAt()));
-                    } else {
-                        $date = $item->getUpdatedAt();
-                    }
-
-                    $itemsData[] = [
-                        'url_key'      => $item->getUrl(),
-                        'date_changed' => $date
-                    ];
+                if ($item->getUpdatedAt() && !$this->lastmodValidator->isValid($item->getUpdatedAt())) {
+                    $date = date('Y-m-d', strtotime($item->getUpdatedAt()));
+                } else {
+                    $date = $item->getUpdatedAt();
                 }
+
+                $itemsData[] = [
+                    'url_key'      => $item->getUrl(),
+                    'date_changed' => $date
+                ];
             }
         }
 

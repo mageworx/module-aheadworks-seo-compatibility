@@ -14,21 +14,8 @@
             <label>SEO</label>
             <tab>mageworx</tab>
             <resource>MageWorx_XmlSitemap::config_xmlsitemap</resource>
-            <group id="xml_sitemap" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
-                <group id="xml_sitemap_aheadworks_blog" translate="label comment" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label><![CDATA[Aheadworks Blog in XML Sitemap]]></label>
-                    <field id="add_blog_pages" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label><![CDATA[Add Aheadworks Blog Pages To XML Sitemap]]></label>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                        <comment><![CDATA[This setting will work if you have Aheadworks Blog extension and SEO Compatibility Extension.]]></comment>
-                    </field>
-                    <field id="add_posts" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label><![CDATA[Add Post Pages]]></label>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                        <depends>
-                            <field id="add_blog_pages">1</field>
-                        </depends>
-                    </field>
+            <group id="xml_sitemap">
+                <group id="xml_sitemap_aheadworks_blog">
                     <field id="add_categories" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label><![CDATA[Add Category Pages]]></label>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>

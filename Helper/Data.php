@@ -15,32 +15,32 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     /**
      * XML config path show Aheadworks Blog Pages
      */
-    const XML_PATH_ADD_BLOG_PAGES = 'mageworx_seo/xml_sitemap_aheadworks_blog/add_blog_pages';
+    const XML_PATH_ADD_BLOG_PAGES = 'mageworx_seo/xml_sitemap/xml_sitemap_aheadworks_blog/add_blog_pages';
 
     /**
      * XML config path add post pages
      */
-    const XML_PATH_ADD_POSTS = 'mageworx_seo/xml_sitemap_aheadworks_blog/add_posts';
+    const XML_PATH_ADD_POSTS = 'mageworx_seo/xml_sitemap/xml_sitemap_aheadworks_blog/add_posts';
 
     /**
      * XML config path add categories pages
      */
-    const XML_PATH_ADD_CATEGORIES = 'mageworx_seo/xml_sitemap_aheadworks_blog/add_categories';
+    const XML_PATH_ADD_CATEGORIES = 'mageworx_seo/xml_sitemap/xml_sitemap_aheadworks_blog/add_categories';
 
     /**
      * XML config path add static pages
      */
-    const XML_PATH_ADD_STATIC_PAGES = 'mageworx_seo/xml_sitemap_aheadworks_blog/add_static_pages';
+    const XML_PATH_ADD_STATIC_PAGES = 'mageworx_seo/xml_sitemap/xml_sitemap_aheadworks_blog/add_static_pages';
 
     /**
      * XML config path add author pages
      */
-    const XML_PATH_PRIORITY = 'mageworx_seo/xml_sitemap_aheadworks_blog/blog_pages_priority';
+    const XML_PATH_PRIORITY = 'mageworx_seo/xml_sitemap/xml_sitemap_aheadworks_blog/blog_pages_priority';
 
     /**
      * XML config path add author pages
      */
-    const XML_PATH_CHANGEFREQ = 'mageworx_seo/xml_sitemap_aheadworks_blog/blog_pages_changefreq';
+    const XML_PATH_CHANGEFREQ = 'mageworx_seo/xml_sitemap/xml_sitemap_aheadworks_blog/blog_pages_changefreq';
 
     /**
      * @var int
